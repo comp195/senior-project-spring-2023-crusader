@@ -1,3 +1,3 @@
-#Crusader
-Medieval Game created by Ishaan Aggarwal, Eustolio , Aaron
+# Crusader
+Medieval Game created by Ishaan Aggarwal, Eustolio Cruz, Aaron Necoechea
 
