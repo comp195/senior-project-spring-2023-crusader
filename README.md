@@ -17,3 +17,8 @@ Our team has successfully accessed our unity game and are able to push and pull 
 
 Special Note(s): 
 Initially was going to be a project done through Unreal engine, but due to hardware limitatios it has been decided that it will be done through Unity instead.
+
+How to Move:
+A/Left Arrow: Left
+D/Right Arrow: Right
+Space: Jump
