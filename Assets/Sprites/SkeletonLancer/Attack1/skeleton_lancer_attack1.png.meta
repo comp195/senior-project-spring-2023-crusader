@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb2cfe9dd4fedbe46a6f12f9c25337bb
+guid: 0a6a8c6e8c9bded44a91a16aaca6fea6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,75 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton_archer_attack1_0
+      name: skeleton_lancer_attack1_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 4
         y: 0
-        width: 43
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deef4c4e21db6d244a53ff79c1a11d0f
+      internalID: 1269249059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_attack1_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee3a5bfaef9a7449aa1e1816c445056
+      internalID: -1165423830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_attack1_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 23
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ec94e849073754fa69c2ac29e33fca
+      internalID: -1805342123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_attack1_3
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 80
         height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +194,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614d3cf5ae9157043b82ca24afe2cac0
-      internalID: 2098258065
+      spriteID: 3bd25de2a12f8514ab6d555c87bb6982
+      internalID: -1246468593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_1
+      name: skeleton_lancer_attack1_4
       rect:
         serializedVersion: 2
-        x: 167
+        x: 417
         y: 0
-        width: 57
+        width: 81
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eade9c7433f92342923a5b9f58ddcc2
+      internalID: 1546764076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_attack1_5
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30deb15485ff0941985456deded4ccd
+      internalID: 230327958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_attack1_6
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 76
         height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,92 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880a0c45e776c7442a5f58d7e471bec9
-      internalID: -399249854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_2
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 0
-        width: 40
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26b098a44e4816a41a6bdca68a0f3295
-      internalID: -890244397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_3
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 0
-        width: 33
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e90b67f2eb3d13a41a753f607a7690e6
-      internalID: -96011902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_4
-      rect:
-        serializedVersion: 2
-        x: 554
-        y: 0
-        width: 33
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 385e7cfb395016947b2b2764caaa75c7
-      internalID: -1521777829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_5
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 0
-        width: 50
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0a71c3009cee4e47b797d68cd1c5f79
-      internalID: 662874739
+      spriteID: 41fa3276f5dd1674393667466862c385
+      internalID: -1486346598
       vertices: []
       indices: 
       edges: []
@@ -253,12 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_archer_attack1_3: -96011902
-      skeleton_archer_attack1_1: -399249854
-      skeleton_archer_attack1_0: 2098258065
-      skeleton_archer_attack1_4: -1521777829
-      skeleton_archer_attack1_2: -890244397
-      skeleton_archer_attack1_5: 662874739
+      skeleton_lancer_attack1_0: 1269249059
+      skeleton_lancer_attack1_2: -1805342123
+      skeleton_lancer_attack1_6: -1486346598
+      skeleton_lancer_attack1_3: -1246468593
+      skeleton_lancer_attack1_5: 230327958
+      skeleton_lancer_attack1_1: -1165423830
+      skeleton_lancer_attack1_4: 1546764076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

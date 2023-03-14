@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb2cfe9dd4fedbe46a6f12f9c25337bb
+guid: f2127fa0b419b6d44a9ff6c90dbde250
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton_archer_attack1_0
+      name: skeleton_archer_dead_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 0
-        width: 43
+        width: 33
         height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614d3cf5ae9157043b82ca24afe2cac0
-      internalID: 2098258065
+      spriteID: 7cb6234daf98a1049acbc43de59f2c89
+      internalID: -1261561174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_1
+      name: skeleton_archer_dead_1
       rect:
         serializedVersion: 2
-        x: 167
+        x: 163
         y: 0
-        width: 57
-        height: 61
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880a0c45e776c7442a5f58d7e471bec9
-      internalID: -399249854
+      spriteID: 155a067ad3bb72b4da81c99ec44e2e3f
+      internalID: -1049918491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_2
+      name: skeleton_archer_dead_2
       rect:
         serializedVersion: 2
-        x: 296
+        x: 290
         y: 0
-        width: 40
-        height: 58
+        width: 52
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b098a44e4816a41a6bdca68a0f3295
-      internalID: -890244397
+      spriteID: 2ded17547963fff448ca4aef57e05f30
+      internalID: 502056332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_3
+      name: skeleton_archer_dead_3
       rect:
         serializedVersion: 2
-        x: 426
+        x: 416
         y: 0
-        width: 33
-        height: 55
+        width: 70
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90b67f2eb3d13a41a753f607a7690e6
-      internalID: -96011902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_4
-      rect:
-        serializedVersion: 2
-        x: 554
-        y: 0
-        width: 33
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 385e7cfb395016947b2b2764caaa75c7
-      internalID: -1521777829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_5
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 0
-        width: 50
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0a71c3009cee4e47b797d68cd1c5f79
-      internalID: 662874739
+      spriteID: 92c835ccdf17374488518f08d66af826
+      internalID: 296919469
       vertices: []
       indices: 
       edges: []
@@ -253,12 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_archer_attack1_3: -96011902
-      skeleton_archer_attack1_1: -399249854
-      skeleton_archer_attack1_0: 2098258065
-      skeleton_archer_attack1_4: -1521777829
-      skeleton_archer_attack1_2: -890244397
-      skeleton_archer_attack1_5: 662874739
+      skeleton_archer_dead_3: 296919469
+      skeleton_archer_dead_2: 502056332
+      skeleton_archer_dead_1: -1049918491
+      skeleton_archer_dead_0: -1261561174
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

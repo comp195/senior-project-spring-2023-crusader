@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb2cfe9dd4fedbe46a6f12f9c25337bb
+guid: bf3908af99d3a2146946998ef6a99de6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,33 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton_archer_attack1_0
+      name: skeleton_lancer_walk_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 20
         y: 0
-        width: 43
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 614d3cf5ae9157043b82ca24afe2cac0
-      internalID: 2098258065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton_archer_attack1_1
-      rect:
-        serializedVersion: 2
-        x: 167
-        y: 0
-        width: 57
+        width: 76
         height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880a0c45e776c7442a5f58d7e471bec9
-      internalID: -399249854
+      spriteID: ce978464db4a2494d87e0a1195629325
+      internalID: 1168458265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_2
+      name: skeleton_lancer_walk_1
       rect:
         serializedVersion: 2
-        x: 296
+        x: 148
         y: 0
-        width: 40
-        height: 58
+        width: 76
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b098a44e4816a41a6bdca68a0f3295
-      internalID: -890244397
+      spriteID: 819b9fdc8b209c841913e2d9c850ed6f
+      internalID: -197777199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_3
+      name: skeleton_lancer_walk_2
       rect:
         serializedVersion: 2
-        x: 426
+        x: 276
         y: 0
-        width: 33
-        height: 55
+        width: 76
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90b67f2eb3d13a41a753f607a7690e6
-      internalID: -96011902
+      spriteID: ebe79a354f3cc2347a159312a36d1d48
+      internalID: -276609133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_4
+      name: skeleton_lancer_walk_3
       rect:
         serializedVersion: 2
-        x: 554
+        x: 404
         y: 0
-        width: 33
-        height: 55
+        width: 76
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385e7cfb395016947b2b2764caaa75c7
-      internalID: -1521777829
+      spriteID: b93dbf1afada6fa44be34bb3887beec6
+      internalID: -495008964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_5
+      name: skeleton_lancer_walk_4
       rect:
         serializedVersion: 2
-        x: 680
+        x: 533
         y: 0
-        width: 50
-        height: 55
+        width: 76
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +215,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a71c3009cee4e47b797d68cd1c5f79
-      internalID: 662874739
+      spriteID: 617b0df3c02e5154e947f3a902331574
+      internalID: 59434692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_lancer_walk_5
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 0
+        width: 76
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be85b5449e61044dbea62cd56b1afb6
+      internalID: 1963851912
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_archer_attack1_3: -96011902
-      skeleton_archer_attack1_1: -399249854
-      skeleton_archer_attack1_0: 2098258065
-      skeleton_archer_attack1_4: -1521777829
-      skeleton_archer_attack1_2: -890244397
-      skeleton_archer_attack1_5: 662874739
+      skeleton_lancer_walk_5: 1963851912
+      skeleton_lancer_walk_4: 59434692
+      skeleton_lancer_walk_1: -197777199
+      skeleton_lancer_walk_3: -495008964
+      skeleton_lancer_walk_0: 1168458265
+      skeleton_lancer_walk_2: -276609133
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

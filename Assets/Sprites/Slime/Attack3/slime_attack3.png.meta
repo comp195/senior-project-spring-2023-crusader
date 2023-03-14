@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb2cfe9dd4fedbe46a6f12f9c25337bb
+guid: 50d64552875f4c549bb8809f9507a4da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton_archer_attack1_0
+      name: slime_attack3_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 303
+        y: 0
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958cb0a6824429a41b8a7df44627335c
+      internalID: 610982780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_attack3_1
+      rect:
+        serializedVersion: 2
+        x: 424
         y: 0
         width: 43
-        height: 56
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614d3cf5ae9157043b82ca24afe2cac0
-      internalID: 2098258065
+      spriteID: 00c26581e171f2344816974176f44abd
+      internalID: 2083111037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_1
+      name: slime_attack3_2
       rect:
         serializedVersion: 2
-        x: 167
+        x: 545
         y: 0
-        width: 57
-        height: 61
+        width: 60
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880a0c45e776c7442a5f58d7e471bec9
-      internalID: -399249854
+      spriteID: 7629fdc989724e344b8ec90cdfcea4f6
+      internalID: -1620090838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_2
+      name: slime_attack3_3
       rect:
         serializedVersion: 2
-        x: 296
+        x: 687
         y: 0
-        width: 40
-        height: 58
+        width: 28
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +194,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b098a44e4816a41a6bdca68a0f3295
-      internalID: -890244397
+      spriteID: 6fe259988f43e49458bc6a5d8baf4968
+      internalID: 433798135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_3
+      name: slime_attack3_4
       rect:
         serializedVersion: 2
-        x: 426
+        x: 688
+        y: 19
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425a1c4b6bdfc60418c73303aad47700
+      internalID: -1585381611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_attack3_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 17
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f61ae3378081164fb75a8702e9cc693
+      internalID: 929831819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_attack3_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 39
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86186ec035979c14dacd0ef9693b522d
+      internalID: -1049236644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_attack3_7
+      rect:
+        serializedVersion: 2
+        x: 172
         y: 0
         width: 33
-        height: 55
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +278,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90b67f2eb3d13a41a753f607a7690e6
-      internalID: -96011902
+      spriteID: ff8324f9b7c44f24db38b08d31d5fe67
+      internalID: -1735484606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_4
+      name: slime_attack3_8
       rect:
         serializedVersion: 2
-        x: 554
+        x: 462
+        y: 7
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e34ea7b49478714786d8a8fc0841bd3
+      internalID: -1269585065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_attack3_9
+      rect:
+        serializedVersion: 2
+        x: 812
         y: 0
         width: 33
-        height: 55
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385e7cfb395016947b2b2764caaa75c7
-      internalID: -1521777829
+      spriteID: d4e2d74376aecc0488d940bf32c2c062
+      internalID: 2116855045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_archer_attack1_5
+      name: slime_attack3_10
       rect:
         serializedVersion: 2
-        x: 680
+        x: 940
         y: 0
-        width: 50
-        height: 55
+        width: 35
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a71c3009cee4e47b797d68cd1c5f79
-      internalID: 662874739
+      spriteID: 377348f7bb3a3e24d8c0754ebf30485d
+      internalID: -141008442
       vertices: []
       indices: 
       edges: []
@@ -253,12 +358,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_archer_attack1_3: -96011902
-      skeleton_archer_attack1_1: -399249854
-      skeleton_archer_attack1_0: 2098258065
-      skeleton_archer_attack1_4: -1521777829
-      skeleton_archer_attack1_2: -890244397
-      skeleton_archer_attack1_5: 662874739
+      slime_attack3_0: 610982780
+      slime_attack3_6: -1049236644
+      slime_attack3_10: -141008442
+      slime_attack3_1: 2083111037
+      slime_attack3_2: -1620090838
+      slime_attack3_4: -1585381611
+      slime_attack3_9: 2116855045
+      slime_attack3_7: -1735484606
+      slime_attack3_8: -1269585065
+      slime_attack3_3: 433798135
+      slime_attack3_5: 929831819
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

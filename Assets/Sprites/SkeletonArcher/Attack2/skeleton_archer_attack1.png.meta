@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb2cfe9dd4fedbe46a6f12f9c25337bb
+guid: 2cd56dd790244ea4884839a9617885f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,10 +120,10 @@ TextureImporter:
       name: skeleton_archer_attack1_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 0
-        width: 43
-        height: 56
+        width: 31
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614d3cf5ae9157043b82ca24afe2cac0
-      internalID: 2098258065
+      spriteID: 11f31e6cb443b654681f86876509d0e6
+      internalID: -827868690
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: skeleton_archer_attack1_1
       rect:
         serializedVersion: 2
-        x: 167
+        x: 169
         y: 0
-        width: 57
-        height: 61
+        width: 36
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880a0c45e776c7442a5f58d7e471bec9
-      internalID: -399249854
+      spriteID: 78307142f701d7f4e8a128c1870636a7
+      internalID: 1969638634
       vertices: []
       indices: 
       edges: []
@@ -162,10 +162,10 @@ TextureImporter:
       name: skeleton_archer_attack1_2
       rect:
         serializedVersion: 2
-        x: 296
+        x: 294
         y: 0
-        width: 40
-        height: 58
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b098a44e4816a41a6bdca68a0f3295
-      internalID: -890244397
+      spriteID: 6b70a863374921a48bde25ee89cbb139
+      internalID: -1370126971
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: skeleton_archer_attack1_3
       rect:
         serializedVersion: 2
-        x: 426
+        x: 425
         y: 0
-        width: 33
-        height: 55
+        width: 35
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90b67f2eb3d13a41a753f607a7690e6
-      internalID: -96011902
+      spriteID: 5a465ca6e274e6544a75be28e33200a0
+      internalID: -1136422971
       vertices: []
       indices: 
       edges: []
@@ -204,9 +204,9 @@ TextureImporter:
       name: skeleton_archer_attack1_4
       rect:
         serializedVersion: 2
-        x: 554
+        x: 553
         y: 0
-        width: 33
+        width: 36
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385e7cfb395016947b2b2764caaa75c7
-      internalID: -1521777829
+      spriteID: f6b7eb148953172419eacb275d8519e5
+      internalID: 2046986051
       vertices: []
       indices: 
       edges: []
@@ -225,9 +225,9 @@ TextureImporter:
       name: skeleton_archer_attack1_5
       rect:
         serializedVersion: 2
-        x: 680
+        x: 682
         y: 0
-        width: 50
+        width: 31
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a71c3009cee4e47b797d68cd1c5f79
-      internalID: 662874739
+      spriteID: 1706c1c58a64a0e40b878d3c6f4ceb1f
+      internalID: -1085585061
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_archer_attack1_3: -96011902
-      skeleton_archer_attack1_1: -399249854
-      skeleton_archer_attack1_0: 2098258065
-      skeleton_archer_attack1_4: -1521777829
-      skeleton_archer_attack1_2: -890244397
-      skeleton_archer_attack1_5: 662874739
+      skeleton_archer_attack1_3: -1136422971
+      skeleton_archer_attack1_1: 1969638634
+      skeleton_archer_attack1_0: -827868690
+      skeleton_archer_attack1_4: 2046986051
+      skeleton_archer_attack1_2: -1370126971
+      skeleton_archer_attack1_5: -1085585061
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
