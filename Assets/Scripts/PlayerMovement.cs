@@ -4,56 +4,90 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
-    private bool isFacingRight = true;
+    private float moveSpeed;
+    private float jumpForce;
+    private bool isJumping;
+    private float moveHorizontal;
+    private float moveVertical;
+    private bool isFacingRight;
 
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    public Animator animator;
 
     // Update is called once per frame
+
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+
+        moveSpeed = 4f;
+        jumpForce = 75f;
+        isJumping = false;
+        isFacingRight = true;
+    }
+
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveVertical = Input.GetAxisRaw("Vertical");
+    }
 
-        if (Input.GetButtonDown("Jump") && isGrounded())
+    void FixedUpdate()
+    {
+        if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            animator.SetBool("isRunning", true);
+        } else 
+        {
+            animator.SetBool("isRunning", false);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+         if(!isJumping && moveVertical > 0.1f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
-        
-        Flip();
+
+        if (moveHorizontal > 0.1f && !isFacingRight)
+			{
+				Flip();
+			}
+			else if (moveHorizontal < -0.1f && isFacingRight)
+			{
+				// ... flip the player.
+				Flip();
+			}
     }
 
-    private void FixedUpdate()
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if(collision.gameObject.tag == "Platform")
+        {
+            isJumping = false;
+            animator.SetBool("isJumping", false);
+        }
     }
 
-    private bool isGrounded()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+         if(collision.gameObject.tag == "Platform")
+        {
+            isJumping = true;
+            animator.SetBool("isJumping", true);
+        }
     }
-    
+
     private void Flip()
-    {
-        if (horizontal < 0f)
-        {
-            isFacingRight = false;
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-        else
-        {
-            isFacingRight = true;
-            transform.localRotation = Quaternion.Euler(0,0,0);
-        }
-    }
+	{
+		// Switch the way the player is labelled as facing.
+		isFacingRight = !isFacingRight;
+
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 }
 
-//credit for script: https://youtu.be/K1xZ-rycYY8
+//Credit for Movement Implementation: https://www.youtube.com/watch?v=w9NmPShzPpE
+//Credit for Animation Implementation: https://www.youtube.com/watch?v=hkaysu1Z-N8
