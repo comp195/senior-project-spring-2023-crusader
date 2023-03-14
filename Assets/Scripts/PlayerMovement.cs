@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight;
 
     [SerializeField] private Rigidbody2D rb;
+    public Animator animator;
 
     // Update is called once per frame
 
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
 
-        moveSpeed = 3f;
+        moveSpeed = 4f;
         jumpForce = 75f;
         isJumping = false;
         isFacingRight = true;
@@ -36,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
         if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
             rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            animator.SetBool("isRunning", true);
+        } else 
+        {
+            animator.SetBool("isRunning", false);
         }
 
          if(!isJumping && moveVertical > 0.1f)
@@ -45,10 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveHorizontal > 0.1f && !isFacingRight)
 			{
-				// ... flip the player.
 				Flip();
 			}
-			// Otherwise if the input is moving the player left and the player is facing right...
 			else if (moveHorizontal < -0.1f && isFacingRight)
 			{
 				// ... flip the player.
@@ -61,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Platform")
         {
             isJumping = false;
+            animator.SetBool("isJumping", false);
         }
     }
 
@@ -69,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
          if(collision.gameObject.tag == "Platform")
         {
             isJumping = true;
+            animator.SetBool("isJumping", true);
         }
     }
 

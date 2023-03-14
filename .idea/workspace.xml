@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7ee42b07-27fd-40ac-9ca2-cdb24fc24a45" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/skeleton_archer_attack1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/KnightAnimation/knight_attack2.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/KnightAnimation/knight_attack2.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/skeleton_archer_attack1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SkeletonArcher/Attack1/attack-A6.png.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="6kgnaxnf" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Mu1fXatea4gLtyP8kuwPnbt0ZP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ee42b07-27fd-40ac-9ca2-cdb24fc24a45" name="Changes" comment="" />
+      <created>1678602762650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678602762650</updated>
+      <workItem from="1678602766191" duration="57000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
