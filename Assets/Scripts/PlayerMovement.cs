@@ -11,13 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveVertical;
     private bool isFacingRight;
 
-    private bool canRoll = true;
-    private bool isRolling;
-    private float rollingCooldown = 1f;
-    private float rollingPower = 24f;
-    private float rollingTime = 0.5f;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private TrailRenderer tr;
     public Animator animator;
 
     // Update is called once per frame
@@ -27,30 +21,19 @@ public class PlayerMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         moveSpeed = 4f;
-        jumpForce = 50f;
+        jumpForce = 75f;
         isJumping = false;
         isFacingRight = true;
     }
 
     void Update()
     {
-
-        if(isRolling)
-            return;
-
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
-
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canRoll)
-        {
-            StartCoroutine(Roll());
-        }
     }
 
     void FixedUpdate()
     {
-        if(isRolling)
-            return;
         if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
             rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
@@ -104,24 +87,6 @@ public class PlayerMovement : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-
-    private IEnumerator Roll()
-    {
-        canRoll = false;
-        isRolling = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * rollingPower, 0f);
-        tr.emitting = true;
-        animator.SetTrigger("Roll");
-        yield return new WaitForSeconds(rollingTime);
-        animator.SetTrigger("Idle");
-        tr.emitting=false;
-        rb.gravityScale=originalGravity;
-        isRolling = false;
-        canRoll = true;
-
-    }
 }
 
 //Credit for Movement Implementation: https://www.youtube.com/watch?v=w9NmPShzPpE
