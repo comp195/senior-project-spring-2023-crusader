@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 //Old project code from my Unity class
 public class GameManager : MonoBehaviour {
@@ -36,10 +38,15 @@ public class GameManager : MonoBehaviour {
    //     SceneManager.LoadScene("SampleScene");
     //}
 
-    public void StartGame() {
+    public void StartGame()
+    {
         SceneManager.LoadScene("MainGame");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void ExitGame() {
         Application.Quit();
     }
