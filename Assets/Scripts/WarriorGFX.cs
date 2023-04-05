@@ -5,24 +5,25 @@ using UnityEngine;
 
 public class WarriorGFX : MonoBehaviour
 {
-    public float attackDistance;
-    public float timer;
-    private GameObject target;
-    private bool inRange;
-    private bool cooling;
-    private float intTimer;
-    private bool attackMode;
-    public bool faceLeft = true;
 
-    private RaycastHit2D hit;
     public Transform rayCast;
     public LayerMask raycastMask;
     public float rayCastLength;
-
+    public float attackDistance;
     public float moveSpeed;
-    private float distance;
+    public float timer;
 
+    private RaycastHit2D hit;
+    private GameObject target;
     private Animator anim;
+    private float distance;
+    private bool attackMode;
+    private bool inRange;
+    private bool cooling;
+    private float intTimer;
+
+    public bool faceLeft = true;
+
     // Update is called once per frame
 
     private void Awake()
@@ -34,13 +35,6 @@ public class WarriorGFX : MonoBehaviour
 
     void Update()
     {
-        /* if(aiPath.desiredVelocity.x >= 0.01f)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        } else if (aiPath.desiredVelocity.x <= -0.01f)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        } */
         if(inRange)
         {
             hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, raycastMask);
@@ -49,7 +43,8 @@ public class WarriorGFX : MonoBehaviour
 
         if(hit.collider != null){
             EnemyLogic();
-        } else if (hit.collider==null)
+        } 
+        else if (hit.collider==null)
         {
             inRange = false;
         }
@@ -61,6 +56,15 @@ public class WarriorGFX : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D trig)
+    {
+        if(trig.gameObject.tag == "Player")
+        {
+            target = trig.gameObject;
+            inRange = true;
+        }
+    }
+
     void EnemyLogic()
     {
         distance = Vector2.Distance(transform.position, target.transform.position);
@@ -68,10 +72,17 @@ public class WarriorGFX : MonoBehaviour
         if(distance > attackDistance)
         {
             Move();
+            StopAttack();
         }
         else if(attackDistance >= distance && cooling == false)
         {
-            anim.SetBool("canAttack1", false);
+            Attack();
+        }
+
+        if(cooling)
+        {
+            Cooldown();
+            anim.SetBool("Attack", false);
         }
     }
 
@@ -112,19 +123,22 @@ public class WarriorGFX : MonoBehaviour
         anim.SetBool("canAttack1", true);
     }
 
+    void Cooldown()
+    {
+        timer -= Time.deltaTime;
+
+        if(timer <= 0 && cooling && attackMode)
+        {
+            cooling = false;
+            timer = intTimer;
+        }
+    }
+
     void StopAttack()
     {
         cooling = false;
         attackMode = false;
         anim.SetBool("canAttack1", false);
-    }
-
-    void OnTriggerEnter2D(Collider2D trig){
-        if(trig.gameObject.tag == "Player")
-        {
-            target = trig.gameObject;
-            inRange=true;
-        }
     }
 
     void RaycastDebugger()
@@ -137,5 +151,9 @@ public class WarriorGFX : MonoBehaviour
         {
             Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.green);
         }
+    }
+
+    public void TriggerCooling(){
+        cooling=true;
     }
 }
