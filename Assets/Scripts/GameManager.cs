@@ -1,56 +1,106 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 //Old project code from my Unity class
 public class GameManager : MonoBehaviour {
-    [SerializeField] private GameObject timer;
-    [SerializeField] private GameObject WinUI;
-
-    public float threshold;
-
+    public static bool GameIsPaused = false;
+    public GameObject PauseMenuUI;
+    public bool isFullScreen = true;
+    public Dropdown resolutionDropdown;
+    
+    Resolution[] resolutions;
+    
     // Start is called before the first frame update
     void Start()
     {
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
         
+        List<string> options = new List<string>();
+        int currentResolutionIndex = 0;
+        
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }   
+        
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
     }
 
     // Update is called once per frame
-    void Update() {
-        
-    }
-    
-    void PauseGame ()
+    void Update()
     {
-        Time.timeScale = 0;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
-    void ResumeGame ()
+
+    public void Resume()
     {
-        Time.timeScale = 1;
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
-    
-    //public void MainScreen() {
-    //    SceneManager.LoadScene("StartScreen");
-   // }
 
-    //public void Restart() {
-   //     SceneManager.LoadScene("SampleScene");
-    //}
-
-    public void StartGame() {
+    public void Pause()
+    {
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+    public void StartGame()
+    {
         SceneManager.LoadScene("MainGame");
+        Time.timeScale = 1f;
     }
-
+    
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        GameIsPaused = false;
+    }
     public void ExitGame() {
         Application.Quit();
     }
 
-    //public void GameOver() {
-    //    SceneManager.LoadScene("GameOverScene");
-    //}
+    public void GameOver() {
+       SceneManager.LoadScene("LoseScreen");
+    }
 
     public void WinGame()
     {
-        Time.timeScale = 0;
+        SceneManager.LoadScene("WinScreen");
     }
 
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+    //Credit to Brackeys for menus: https://www.youtube.com/watch?v=JivuXdrIHK0
+    //                              https://youtu.be/YOaYQrN1oYQ
 }
