@@ -92,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             animator.SetBool("isJumping", true);
         }
+
+        
     }
 
     private void Flip()
@@ -119,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         tr.emitting=false;
         rb.gravityScale=originalGravity;
         isRolling = false;
+        yield return new WaitForSeconds(rollingCooldown);
         canRoll = true;
 
     }

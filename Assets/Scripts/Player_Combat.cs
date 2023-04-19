@@ -36,7 +36,9 @@ public class Player_Combat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            //enemy.GetComponent<Skeleton_Warrior>().enemyTakeDamage(20);
+            if(enemy.gameObject.TryGetComponent<EnemyBehavior>(out EnemyBehavior enemyComponent))
+                enemyComponent.TakeDamage(15);
+            //enemy.GetComponent<EnemyBehavior>().TakeDamage(20);
         }
     }
 
