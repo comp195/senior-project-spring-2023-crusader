@@ -8,9 +8,11 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour {
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
+    public GameObject SkillsMenuUI;
+    public SkillGenerator skillGenerator;
     public bool isFullScreen = true;
     public Dropdown resolutionDropdown;
-    
+    [SerializeField] GameObject boss;
     Resolution[] resolutions;
     
     // Start is called before the first frame update
@@ -52,6 +54,8 @@ public class GameManager : MonoBehaviour {
                 Pause();
             }
         }
+        if(boss.GetComponent<EnemyBehavior>().currentHealth < 0)
+            WinGame();
     }
 
     public void Resume()
@@ -66,6 +70,21 @@ public class GameManager : MonoBehaviour {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void SkillPause()
+    {
+        skillGenerator.generate();
+        SkillsMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void SkillUnpause()
+    {
+        GameIsPaused = false;
+        SkillsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void StartGame()
     {

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float moveSpeed;
-    private float jumpForce;
+    public float moveSpeed;
+    public float jumpForce;
     private bool isJumping;
     private float moveHorizontal;
     private float moveVertical;
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float rollingTime = 0.5f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
+    public Transform attackPoint;
     public Animator animator;
 
     // Update is called once per frame
@@ -123,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
         isRolling = false;
         yield return new WaitForSeconds(rollingCooldown);
         canRoll = true;
-
+        Debug.Log("hello");
     }
 }
 

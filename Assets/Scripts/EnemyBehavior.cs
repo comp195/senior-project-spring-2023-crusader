@@ -12,7 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     public int attackDamage;
     public float attackCooldown;
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
     private bool attacking = false;
     public Animator anim;
 
@@ -22,9 +22,11 @@ public class EnemyBehavior : MonoBehaviour
 
     void Update () {
         if(Vector2.Distance(transform.position, player.position) < 50){
+            Debug.Log(attacking);
             anim.SetBool("hit",false);
             if (Vector2.Distance(transform.position, player.position) <= attackRange && !attacking) {
                 anim.SetBool("canAttack", true);
+                anim.SetBool("canWalk", false);
                 Attack();
             } else {
                 anim.SetBool("canWalk", true);
@@ -42,6 +44,7 @@ public class EnemyBehavior : MonoBehaviour
             }
 
         } else {
+            Debug.Log("hello");
             anim.SetTrigger("idle");
         }
     }
@@ -54,12 +57,16 @@ public class EnemyBehavior : MonoBehaviour
     }
 
     IEnumerator AttackPlayer() {
-        while (Vector2.Distance(transform.position, player.position) <= attackRange) {
+        if (Vector2.Distance(transform.position, player.position) <= attackRange) {
+            yield return new WaitForSeconds(1.25f);
             player.GetComponent<PlayerBehavior>().PlayerTakeDamage(attackDamage);
+            Debug.Log("attack");
             yield return new WaitForSeconds(attackCooldown);
         }
+        Debug.Log("exit");
         attacking = false;
         anim.SetBool("canWalk", true);
+        anim.SetBool("canAttack", false);
     }
     public void TakeDamage(int damage) {
         currentHealth -= damage;

@@ -47,9 +47,12 @@ namespace Player
             animator.SetBool("hit", false);
         }
 
-        private void PlayerHeal(int healing)
+        public void PlayerHeal(int healing)
         {
             GameManager1.gameManager.playerHealth.HealUnit(healing);
+            currentHealth+=healing;
+            if(currentHealth > maxHealth)
+                currentHealth = maxHealth;
             health_bar.SetHealth(currentHealth);
         }
 
