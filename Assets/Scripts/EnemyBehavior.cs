@@ -4,44 +4,83 @@ using UnityEngine;
 using Player;
 public class EnemyBehavior : MonoBehaviour
 {
-    public Transform leftLimit;
-    public Transform rightLimit;
+
     public Transform player;
     public float moveSpeed;
     public float attackRange;
     public int attackDamage;
     public float attackCooldown;
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
     private bool attacking = false;
     public Animator anim;
-
+    private bool isFacingRight;
+    private float moveHorizontal;
+    public GameManager gm;
     void Start () {
         currentHealth = maxHealth;
+        isFacingRight = false;
+    }
+
+    void U()
+    {
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+    }
+            
+    void FixedUpdate()
+    {
+        if (player.transform.position.x < gameObject.transform.position.x && isFacingRight)
+        {
+            Flip();
+        }
+        else if (player.transform.position.x > gameObject.transform.position.x && !isFacingRight)
+        {
+            Flip();
+        }
+    }
+
+    
+
+
+
+
+
+private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        isFacingRight = !isFacingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = gameObject.transform.localScale;
+        theScale.x *= -1;
+        gameObject.transform.localScale = theScale;
+        
     }
 
     void Update () {
-        if(Vector2.Distance(transform.position, player.position) < 50){
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Vector2.Distance(transform.position, player.position) < 50){
             anim.SetBool("hit",false);
             if (Vector2.Distance(transform.position, player.position) <= attackRange && !attacking) {
                 anim.SetBool("canAttack", true);
+                anim.SetBool("canWalk", false);
                 Attack();
             } else {
                 anim.SetBool("canWalk", true);
                 anim.SetBool("canAttack", false);
                 if (player.position.x < transform.position.x) {
                     transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+                    
                 } else {
                     transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+                    
                 }
-                if (transform.position.x > rightLimit.position.x) {
-                    transform.position = new Vector2(rightLimit.position.x, transform.position.y);
-                } else if (transform.position.x < leftLimit.position.x) {
-                    transform.position = new Vector2(leftLimit.position.x, transform.position.y);
-                }
+
             }
 
         } else {
+            Debug.Log("hello");
             anim.SetTrigger("idle");
         }
     }
@@ -54,12 +93,16 @@ public class EnemyBehavior : MonoBehaviour
     }
 
     IEnumerator AttackPlayer() {
-        while (Vector2.Distance(transform.position, player.position) <= attackRange) {
+        if (Vector2.Distance(transform.position, player.position) <= attackRange) {
+            yield return new WaitForSeconds(1.25f);
             player.GetComponent<PlayerBehavior>().PlayerTakeDamage(attackDamage);
+            Debug.Log("attack");
             yield return new WaitForSeconds(attackCooldown);
         }
+        Debug.Log("exit");
         attacking = false;
         anim.SetBool("canWalk", true);
+        anim.SetBool("canAttack", false);
     }
     public void TakeDamage(int damage) {
         currentHealth -= damage;

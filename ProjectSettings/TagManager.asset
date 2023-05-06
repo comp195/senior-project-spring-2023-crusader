@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Enemy
+  - Wall
+  - Boss
   layers:
   - Default
   - TransparentFX
