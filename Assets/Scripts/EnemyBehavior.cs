@@ -4,8 +4,7 @@ using UnityEngine;
 using Player;
 public class EnemyBehavior : MonoBehaviour
 {
-    public Transform leftLimit;
-    public Transform rightLimit;
+
     public Transform player;
     public float moveSpeed;
     public float attackRange;
@@ -76,13 +75,7 @@ private void Flip()
                     transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
                     
                 }
-                if (transform.position.x > rightLimit.position.x) {
-                    transform.position = new Vector2(rightLimit.position.x, transform.position.y);
-                    
-                } else if (transform.position.x < leftLimit.position.x) {
-                    transform.position = new Vector2(leftLimit.position.x, transform.position.y);
-                    
-                }
+
             }
 
         } else {
