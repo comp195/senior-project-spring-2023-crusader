@@ -7,6 +7,8 @@ public class Teleport : MonoBehaviour
     public GameObject portal;
     private GameObject player;
 
+    public GameManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class Teleport : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.tag == "Player"){
             player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
+            manager.SkillPause();
         }
     }
 }
