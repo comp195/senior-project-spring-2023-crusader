@@ -129,29 +129,50 @@ public class SkillGenerator : MonoBehaviour
                 player.GetComponent<PlayerMovement>().jumpForce += 10;
                 break;
         }
+        Debug.Log("Exit");
         gm.SkillUnpause();
     }
 
     public void skillObtain2()
     {
-        /*switch(skills[1])
+        switch(skills[0])
         {
             case 1:
+                player.GetComponent<PlayerMovement>().moveSpeed *= 1.5f;
+                break;
             case 2:
+                player.GetComponent<PlayerBehavior>().maxHealth += 100;
+                player.GetComponent<PlayerBehavior>().PlayerHeal(100);
+                break;
             case 3:
+                player.GetComponent<Player_Combat>().damage *= 2;
+                break;
             case 4:
-        }*/
+                player.GetComponent<PlayerMovement>().jumpForce += 10;
+                break;
+        }
+        Debug.Log("Exit");
         gm.SkillUnpause();
     }
     public void skillObtain3()
     {
-        /*switch(skills[2])
+        switch(skills[0])
         {
             case 1:
+                player.GetComponent<PlayerMovement>().moveSpeed *= 1.5f;
+                break;
             case 2:
+                player.GetComponent<PlayerBehavior>().maxHealth += 100;
+                player.GetComponent<PlayerBehavior>().PlayerHeal(100);
+                break;
             case 3:
+                player.GetComponent<Player_Combat>().damage *= 2;
+                break;
             case 4:
-        }*/
+                player.GetComponent<PlayerMovement>().jumpForce += 10;
+                break;
+        }
+        Debug.Log("Exit");
         gm.SkillUnpause();
     }
 }

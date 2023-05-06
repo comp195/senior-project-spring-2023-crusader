@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public Dropdown resolutionDropdown;
     [SerializeField] GameObject boss;
     Resolution[] resolutions;
+    bool callOnce = false;
     
     // Start is called before the first frame update
     void Start()
@@ -54,8 +55,14 @@ public class GameManager : MonoBehaviour {
                 Pause();
             }
         }
-        if(boss.GetComponent<EnemyBehavior>().currentHealth < 0)
-            WinGame();
+        Debug.Log("Haven't won");
+        if(boss.GetComponent<EnemyBehavior>().currentHealth <= 0 || boss == null){
+            callOnce=true;
+            if (callOnce){
+                WinGame();
+                Debug.Log("We won");
+            }
+        }
     }
 
     public void Resume()
@@ -88,6 +95,7 @@ public class GameManager : MonoBehaviour {
     }
     public void StartGame()
     {
+        callOnce = false;
         SceneManager.LoadScene("MainGame");
         Time.timeScale = 1f;
     }

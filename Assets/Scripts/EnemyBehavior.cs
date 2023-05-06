@@ -16,7 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     public Animator anim;
     private bool isFacingRight;
     private float moveHorizontal;
-
+    public GameManager gm;
     void Start () {
         currentHealth = maxHealth;
         isFacingRight = false;
